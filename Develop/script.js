@@ -22,7 +22,7 @@
 var currentDayEl = $('#currentDay');
 var saveBtnEl = $('.saveBtn');
 var textAreaEl = $('textarea')
-var text = "";
+//var text = "";
 
 function displayTime() {
   var today = dayjs().format('[Today is: ]dddd, MMM DD, YYYY');
@@ -45,19 +45,34 @@ function saveScheduleToStorage(schedules) {
 
 //Referenced from https://bobbyhadz.com/blog/javascript-get-value-of-textarea to grab input data from textarea
 textAreaEl.on('input', function (event) {
-  text = event.target.value.trim();
+  var text = event.target.value;
+  var ta = $(event.target).attr('id');
+  $("#" + ta).val(text);
 })
 
 saveBtnEl.on("click", function (event) {
   event.preventDefault();
+
+  //This part of code allows button's background color to change for a second when clicked//
+  //so it's easier for user to notice if button is clicked and saved
+  // referenced from: https://stackoverflow.com/questions/3003819/possible-to-change-background-color-onclick-then-automatically-change-back-a-se
+  $(event.target).css('backgroundColor', '#008000');
+  // after 1 second, change it back
+  setTimeout(function() {
+    $(event.target).css('background-color', '#06aed5');
+  }, 1000);
+  /////
+
   var time = $(this).parent().attr('id'); //Grab clicked time block id
+  var ta = "#text-" + time;
+  var ptext = $(ta).val().trim();
   var newSchedule = {
     id: time,
-    pText: text
+    pText: ptext
   };
 
-  text = ""; //reset text to empty for reusing and storing text for other time blocks
   var schedules = readScheduleFromStorage();
+  //text = ""; //reset text to empty for reusing and storing text for other time blocks
 
   //if user input new text and save, check if the id already exist in the object and replace the text with it.
   // referenced from: https://stackoverflow.com/questions/37585309/replacing-objects-in-array#:~:text=You%20can%20use%20Array%23map%20with%20Array%23find%20.&text=Here%2C%20arr2.,arr1%20i.e.%20obj%20is%20returned.
@@ -112,3 +127,5 @@ function checkTimeBlock() {
 
 displayTime();
 printScheduleData();
+
+
