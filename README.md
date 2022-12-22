@@ -1,10 +1,8 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
 
-## Your Task
+## Task for Work Day Scheduler
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
 
 ## User Story
 
@@ -32,10 +30,39 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+
+## Mock-up
+
 The following animation demonstrates the application functionality:
 
 <!-- @TODO: create ticket to review/update image) -->
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+
+
+## Description
+
+> * A link to deployed application:
+
+
+## How to use
+
+> * When open up the Work Day Scheduler, the user can see today's date and it has time schedule from 9 AM to 9 PM.
+
+> * For each of time block, the user can input their schedules and save them by clicking save button. Once save button is clicked, the button will briefly change color to green to indicate that button is clicked and the content in the time block has been saved. 
+
+> * Saved schedules and events will persist even after refreshing the page and will remain same unless the user modify them. 
+
+> * The time block(s) with event(s) that is/are happened will turn into grey color. Time block with current time will red color. The color for future time block(s) has green color. 
+
+> * At the bottom of the schedule time blocks, there is a clear button that allows the user to clear and reset the schedule.
+
+
+## Credits
+
+> * Code to change background-color for certain amount of time, referenced from: https://stackoverflow.com/questions/3003819/possible-to-change-background-color-onclick-then-automatically-change-back-a-se
+
+> * Code to check if object value is already exist in the array and replace the object, referenced from: https://stackoverflow.com/questions/37585309/replacing-objects-in-array#:~:text=You%20can%20use%20Array%23map%20with%20Array%23find%20.&text=Here%2C%20arr2.,arr1%20i.e.%20obj%20is%20returned. AND https://www.codegrepper.com/tpc/replace+object+in+array+javascript
+
 
 ## Grading Requirements
 
