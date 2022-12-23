@@ -41,20 +41,20 @@ The following animation demonstrates the application functionality:
 
 ## Description
 
-> * A link to deployed application:
+ * A link to deployed application:
 
 
 ## How to use
 
-> * When open up the Work Day Scheduler, the user can see today's date and it has time schedule from 9 AM to 9 PM.
+ * When open up the Work Day Scheduler, the user can see today's date and it has time schedule from 9 AM to 9 PM.
 
-> * For each of time block, the user can input their schedules and save them by clicking save button. Once save button is clicked, the button will briefly change color to green to indicate that button is clicked and the content in the time block has been saved. 
+ * For each of time block, the user can input their schedules and save them by clicking save button. Once save button is clicked, the button will briefly change color to green to indicate that button is clicked and the content in the time block has been saved. 
 
-> * Saved schedules and events will persist even after refreshing the page and will remain same unless the user modify them. 
+ * Saved schedules and events will persist even after refreshing the page and will remain same unless the user modify them. 
 
-> * The time block(s) with event(s) that is/are happened will turn into grey color. Time block with current time will red color. The color for future time block(s) has green color. 
+ * The time block(s) with event(s) that is/are happened will turn into grey color. Time block with current time will red color. The color for future time block(s) has green color. 
 
-> * At the bottom of the schedule time blocks, there is a clear button that allows the user to clear and reset the schedule.
+ * At the bottom of the schedule time blocks, there is a clear button that allows the user to clear and reset the schedule.
 
 
 ## Credits

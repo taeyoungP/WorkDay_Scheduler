@@ -35,7 +35,8 @@ saveBtnEl.on("click", function (event) {
   //This part of code allows button's background color to change for a second when clicked//
   //so it's easier for user to notice if button is clicked and saved
   // referenced from: https://stackoverflow.com/questions/3003819/possible-to-change-background-color-onclick-then-automatically-change-back-a-se
-  $(event.target).css('backgroundColor', '#008000');
+  $(event.target).css('background-color', '#008000');
+
   setTimeout(function() {
     $(event.target).css('background-color', '#06aed5');
   }, 1000);   // after 1 second, change it back
