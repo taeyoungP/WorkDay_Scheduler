@@ -3,7 +3,7 @@ var saveBtnEl = $('.saveBtn');
 var textAreaEl = $('textarea')
 var clearEl = $('.clear');
 
-function displayTime() {
+function displayTime() { //Using dayjs to get today's date
   var today = dayjs().format('[Today is: ]dddd, MMM DD, YYYY');
   currentDayEl.text(today);
 }
@@ -32,15 +32,14 @@ textAreaEl.on('input', function (event) {
 saveBtnEl.on("click", function (event) {
   event.preventDefault();
 
-  //This part of code allows button's background color to change for a second when clicked//
-  //so it's easier for user to notice if button is clicked and saved
+  // Changing button color to green when clicked
   // referenced from: https://stackoverflow.com/questions/3003819/possible-to-change-background-color-onclick-then-automatically-change-back-a-se
-  $(event.target).css('background-color', '#008000');
+  // And https://stackoverflow.com/questions/29168719/can-you-target-an-elements-parent-element-using-event-target
+  $(event.currentTarget).css('background-color', '#008000');
 
-  setTimeout(function() {
-    $(event.target).css('background-color', '#06aed5');
+  setTimeout(function () {
+    $(event.currentTarget).css('background-color', '#06aed5');
   }, 1000);   // after 1 second, change it back
-
 
   var time = $(this).parent().attr('id'); //Grab clicked time block id
   var ta = "#text-" + time;
@@ -51,7 +50,7 @@ saveBtnEl.on("click", function (event) {
   };
 
   var schedules = readScheduleFromStorage();
-  
+
   //if user input new text and save, check if the id already exist in the object and replace the text with it.
   // referenced from: https://stackoverflow.com/questions/37585309/replacing-objects-in-array#:~:text=You%20can%20use%20Array%23map%20with%20Array%23find%20.&text=Here%2C%20arr2.,arr1%20i.e.%20obj%20is%20returned.
   // https://www.codegrepper.com/tpc/replace+object+in+array+javascript
@@ -63,9 +62,6 @@ saveBtnEl.on("click", function (event) {
   saveScheduleToStorage(schedules);
 })
 
-//TODO write function that will go through all hour list elements and show past, current, future 
-//execute last to make sure update everything in the end
-//Need to grab current time to decide if every each time block's schedule has been passed or not.
 function printScheduleData() {
   var schedules = readScheduleFromStorage();
   for (var i = 0; i < schedules.length; i++) {
@@ -75,6 +71,12 @@ function printScheduleData() {
     var ta = timeblockEl.children('textarea');
     ta.val(text); //https://stackoverflow.com/questions/1642447/how-to-change-the-content-of-a-textarea-with-javascript
   }
+  checkTimeBlock();
+}
+
+function clearShceduleData() {
+  var ta = $('textarea');
+  ta.val("");
   checkTimeBlock();
 }
 
@@ -98,10 +100,10 @@ function checkTimeBlock() {
 }
 
 
-clearEl.on("click", function(event){
+clearEl.on("click", function (event) {
   event.preventDefault();
-  localStorage.clear();
-  location.reload();
+  localStorage.clear(); //clear the data stored locally
+  clearShceduleData(); //clear the schedule display
 })
 
 //$(function () {

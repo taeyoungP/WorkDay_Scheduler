@@ -2,7 +2,7 @@
 
 ## Task for Work Day Scheduler
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This challenge is to create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 ## User Story
 
@@ -41,12 +41,31 @@ The following animation demonstrates the application functionality:
 
 ## Description
 
- * A link to deployed application:
+ * A link to deployed application: https://taeyoungp.github.io/WorkDay_Scheduler/
+
+ The following images demnonstrate the application functionality:
+ ![Webpage shows today date for the scheduler.](./Assets/images/work_day_scheduler.png)
+
+ When the page is opened, user will see today's date and the schedule with time block from 9 AM to 9 PM.
+ Past time block has gray color, present time block has red color, and future time block has green color.
+
+ ![User can input schedule in the text area of the time block and save the content.](./Assets/images/work_day_scheduler2.png)
+
+User can input & modify the events in the time block's text area and can save the content by clicking the save button next to its text area. When the save button is clicked, the button's color will change into green color to indicate that content has been saved.
+
+Contents will be saved locally in user's browser and will remain same even when the page is refreshed. 
+
+![User can clear the whole schedule by clicking clear schedule button.](./Assets/images/clear_schedule.png)
+
+User can clear the entire schedule by clicking 'clear schedule' button at the bottom of the page.
+This will clear all content in every time blocks and will erase locally saved text data.
+
+When the user hover the clear schedule button, it will change into red color. (for small warning that they are going to clear the all events in the schedule.)
 
 
 ## How to use
 
- * When open up the Work Day Scheduler, the user can see today's date and it has time schedule from 9 AM to 9 PM.
+ * When open up the Work Day Scheduler, the webpage has time schedule from 9 AM to 9 PM.
 
  * For each of time block, the user can input their schedules and save them by clicking save button. Once save button is clicked, the button will briefly change color to green to indicate that button is clicked and the content in the time block has been saved. 
 
@@ -63,64 +82,9 @@ The following animation demonstrates the application functionality:
 
 > * Code to check if object value is already exist in the array and replace the object, referenced from: https://stackoverflow.com/questions/37585309/replacing-objects-in-array#:~:text=You%20can%20use%20Array%23map%20with%20Array%23find%20.&text=Here%2C%20arr2.,arr1%20i.e.%20obj%20is%20returned. AND https://www.codegrepper.com/tpc/replace+object+in+array+javascript
 
+> * Method for targeting whole elements (currentTarget): https://stackoverflow.com/questions/29168719/can-you-target-an-elements-parent-element-using-event-target 
 
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
 
 - - -
+
 © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
