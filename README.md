@@ -43,7 +43,7 @@ The following animation demonstrates the application functionality:
 
  * A link to deployed application: https://taeyoungp.github.io/WorkDay_Scheduler/
 
- The following images demnonstrate the application functionality:
+ The following images demonstrate the application functionality:
  ![Webpage shows today date for the scheduler.](./Assets/images/work_day_scheduler.png)
 
  When the page is opened, user will see today's date and the schedule with time block from 9 AM to 9 PM.
@@ -51,16 +51,16 @@ The following animation demonstrates the application functionality:
 
  ![User can input schedule in the text area of the time block and save the content.](./Assets/images/work_day_scheduler2.png)
 
-User can input & modify the events in the time block's text area and can save the content by clicking the save button next to its text area. When the save button is clicked, the button's color will change into green color to indicate that content has been saved.
+User can input & modify the events in the time block's text area and can save the content by clicking the save button next to its text area. When the save button is clicked, the button's color will change into green color for 1 second to indicate that content has been saved.
 
 Contents will be saved locally in user's browser and will remain same even when the page is refreshed. 
 
 ![User can clear the whole schedule by clicking clear schedule button.](./Assets/images/clear_schedule.png)
 
 User can clear the entire schedule by clicking 'clear schedule' button at the bottom of the page.
-This will clear all content in every time blocks and will erase locally saved text data.
+This will clear all events in the schedule and will erase locally saved data.
 
-When the user hover the clear schedule button, it will change into red color. (for small warning that they are going to clear the all events in the schedule.)
+When the user hover on 'clear schedule' button, it will change into red color to let user know that they are going to clear the all of the events in the schedule.
 
 
 ## How to use
