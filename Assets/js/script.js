@@ -4,7 +4,7 @@ var textAreaEl = $('textarea')
 var clearEl = $('.clear');
 
 function displayTime() { //Using dayjs to get today's date
-  var today = dayjs().format('[Today is: ]dddd, MMM DD, YYYY');
+  var today = dayjs().format('[Today is: ]dddd, MMM DD, YYYY [at] hh:mm:ss a');
   currentDayEl.text(today);
 }
 
@@ -110,6 +110,8 @@ clearEl.on("click", function (event) {
 //});
 
 displayTime();
+setInterval(displayTime, 1000);
+
 printScheduleData();
 
 
